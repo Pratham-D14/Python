@@ -1,0 +1,11 @@
+ID,Name,Age,Department,Salary,JoiningDate,ExperienceYears
+1,Alice,25,IT,50000,2022-03-15,1
+2,Bob,30,HR,60000,2018-07-21,5
+3,Charlie,28,IT,55000,2020-11-12,3
+4,David,35,Finance,70000,2015-05-30,8
+5,Eva,26,Marketing,48000,2021-08-17,2
+6,Frank,32,IT,62000,2017-02-10,6
+7,Grace,29,HR,59000,2019-12-05,4
+8,Helen,31,Finance,65000,2016-09-22,7
+9,Ian,27,Marketing,47000,2022-01-03,1
+10,Jack,33,IT,68000,2014-06-14,9
