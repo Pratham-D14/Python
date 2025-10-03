@@ -1,0 +1,26 @@
+input:
+    amount (1000 / 2000 / 50)
+    category (food/transport/clothes)
+    date (24-09-2025) (dd-mm-yyyy)
+    description (any description)
+    mode of payment (upi/cash)
+    status(income/expense)
+
+
+Operations to perform:
+    Add a expense/income
+    delete an expense/income (through ID)
+    view all data
+    filter by specific date/month/category
+
+
+Things to take care:
+    New records should be append only
+    Unique ID for each row
+    fixed category ("Food" == "food == fooD")
+
+
+Reports:
+    calculate total income/expense/difference
+    calculation groupby - category / month
+    average income/expense per day
