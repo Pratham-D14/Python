@@ -93,3 +93,23 @@ print(arr)
 # 2D List
 arr = [[0] * 4 for i in range(4)]
 print(arr)
+
+
+# Dist Comprehension
+my_dict = {i: 2*i for i in range(4)}
+print(my_dict)
+
+# Looping through DICTIONARY
+print('----- Key: Values -----')
+for key in my_dict:
+    print(key, my_dict[key])
+
+#
+print('----- Values -----')
+for val in my_dict.values():
+    print(val)
+
+#
+print('----- key/value -----')
+for key, val in my_dict.items():
+    print(key, val)
