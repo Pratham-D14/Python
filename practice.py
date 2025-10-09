@@ -1,3 +1,5 @@
+import ctypes
+
 # Understanding how variable scope works in python
 try:
     x = 10
@@ -109,3 +111,19 @@ print(ord('d'))
 # Joning the string using delimitor
 strings = ['ab', 'cd', 'ed']
 print(''.join(strings))
+
+
+# -------------------------------------------------------------------------
+# Mutability and Immutability in Python
+
+
+fruits = []
+print(f'Older list {fruits} and id: {id(fruits)}')
+
+fruits.append('Apple')
+fruits.append('Orange')
+print(f'Older list {fruits} and id: {id(fruits)}')
+
+# Getting the value using id (memory reference):
+# retrieved_object = ctypes.cast(140714729806616, ctypes.py_object).value
+# print('retrieved_object: ', retrieved_object)
