@@ -113,3 +113,14 @@ for val in my_dict.values():
 print('----- key/value -----')
 for key, val in my_dict.items():
     print(key, val)
+
+
+
+
+# -----------------------------------------------------------------------------
+# Tuples: are similar to arrays, but it's immutable
+print('------- Tuple -------')
+tup = (1, 2, 3, 4)
+print(tup)
+print(tup[0])
+print(tup[1])

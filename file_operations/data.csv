@@ -1,0 +1,4 @@
+amount,category,date,description,mode_of_payment,payment_type
+200,food,29-09-2025,food with friends,cash,debit
+330,garba,30-09-2025,passes,upi,credit
+300,food,10-5-2025,bhuk lagi thi bhai,cash,debit
