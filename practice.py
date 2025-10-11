@@ -127,3 +127,37 @@ print(f'Older list {fruits} and id: {id(fruits)}')
 # Getting the value using id (memory reference):
 # retrieved_object = ctypes.cast(140714729806616, ctypes.py_object).value
 # print('retrieved_object: ', retrieved_object)
+
+
+# --------------------------------------------------------------------------
+# zip()
+
+names = ['person1', 'person2', 'person3', 'person4', 'person5']
+bills = [50, 70, 100, 80, 110]
+
+for name, amount in zip(names, bills):
+    print(f'{name} paid {amount}')
+
+
+# ---------------------------------------------------------------------------
+# For Loop with else condition
+staff = [('person1', 16), ('person2', 17), ('person3', 15)]
+
+# the else condition only run's if the loop didn't break (fallback logic)
+for name, age in staff:
+    if age >= 18:
+        print(f'{name} is eligible to manage the staff')
+        break
+else:
+    print('No one is eligible for managing the staff')
+
+
+# ----------------------------------------------------------------------------
+# Walrus Operators (:=) in python
+
+available_sizes = ['small', 'medium', 'large']
+
+if(requested_size := input('Enter your chai cup size: ')) in available_sizes:
+    print(f'Serving {requested_size} chai')
+else:
+    print('size not available')
