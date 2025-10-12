@@ -157,7 +157,47 @@ else:
 
 available_sizes = ['small', 'medium', 'large']
 
-if(requested_size := input('Enter your chai cup size: ')) in available_sizes:
+if (requested_size := input('Enter your chai cup size: ')) in available_sizes:
     print(f'Serving {requested_size} chai')
 else:
     print('size not available')
+
+
+# ------------------------------------------------------------------------------
+# Scopes in python
+
+scope_checking = 'checking'
+def abc():
+    global scope_checking
+    print(scope_checking)
+
+    def xyz():
+        # There is no binding in lexical scope so using nonlocal will give an error
+        # nonlocal scope_checking
+        # print(scope_checking)
+        pass
+
+    xyz()
+
+abc()
+
+
+# ---------------------------------------------------------------------------------
+# args & *kwargs
+
+def special_chai(*ingredients, **extras):
+    print('Ingredients: ', ingredients)
+    print('extras: ', extras)
+
+special_chai('Cinnamon', 'Ginger', sugar=2, foam='yes', cup='Glass')
+
+
+# --------------------------------------------------------------------------------
+# Returning multiple values from the funtion
+
+def chai_reports():
+    return 100, 20
+
+sold_chai, remaining_chai = chai_reports()  # Destructing return value into variables
+print('Chai Sold Today: ', sold_chai)
+print('Remaining Quantity: ', remaining_chai)
