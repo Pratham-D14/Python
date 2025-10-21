@@ -201,3 +201,70 @@ def chai_reports():
 sold_chai, remaining_chai = chai_reports()  # Destructing return value into variables
 print('Chai Sold Today: ', sold_chai)
 print('Remaining Quantity: ', remaining_chai)
+
+
+# ----------------------------------------------------------------------------------
+# --> List Comprehensions
+
+menu = ['Ginger Chai', 'Iced Tea', 'Masala Chai', 'Iced Lemon Tea', 'Iced Peace Tea', 'Green Tea']
+
+# filtering types of 'ICED TEA' using list comprehensions
+# syntax: [expression for item in iterable if condition]
+iced_tea = [tea for tea in menu if 'Iced' in tea]
+print('Iced Tea: ', iced_tea)
+
+
+# --> Set Comprehensions
+favourite_chai = [
+    "Masala Chai", "Ginger Chai", "Elaichi Chai",
+    "Ginger Chai", "Green Tea", "Lemon Tea"
+]
+
+unique_chai = {tea for tea in favourite_chai}
+print(unique_chai)
+
+recipes = {
+    'Masala Chai': ['ginger', 'cardamom', 'milk', 'clove', 'water', 'sugar'],
+    'Elaichi Chai': ['Elaichi', 'milk', 'water', 'sugar'],
+    'Ginger Chai': ['ginger','milk', 'water', 'sugar']
+}
+
+unique_spices = {spice for ingredients in recipes.values() for spice in ingredients}
+print('Unique Spices: ', unique_spices)
+
+
+# --> Dict Comprehensions
+tea_prices_inr = {
+    'Masala chai': 40,
+    'Green tea': 80,
+    'Lemon tea': 200
+}
+
+tea_prices_usd = {chai:price/80 for chai, price in tea_prices_inr.items()}
+print('Tea price in USD: ', tea_prices_usd)
+
+
+# --> Generator Comprehensions
+daily_sales = [5, 10, 12, 7, 8, 15, 9, 3, 6]
+
+total_sales = sum(sale for sale in daily_sales if sale > 5)
+print('Total Sales: ', total_sales)
+
+
+# --------------------------------------------------------------------------------------
+# Methods in Class
+
+class Chaicup:
+    size = 150 #ml
+
+    def describe(self):
+        return f'A {self.size}ml Chai Cup'
+
+cup = Chaicup()
+print(cup.describe())
+print(Chaicup.describe(cup))  # Giving reference to cup_two
+
+cup_two = Chaicup()
+cup_two.size = 200
+print(cup_two.describe())
+print(Chaicup.describe(cup_two))  # Giving reference to cup_two
